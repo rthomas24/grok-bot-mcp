@@ -1,0 +1,57 @@
+{
+  "name": "grok-bot-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that lets Claude Code, Codex, Cursor and any MCP client drive the Grok Bot desktop app on macOS: list your Bots, read chats, send messages and answer their questions.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "grok",
+    "grok-bot",
+    "spacexai",
+    "xai",
+    "claude",
+    "claude-code",
+    "claude-code-plugin",
+    "codex",
+    "cursor",
+    "agent-skills",
+    "ai-agents",
+    "macos",
+    "automation",
+    "accessibility",
+    "jxa"
+  ],
+  "homepage": "https://github.com/rthomas24/grok-bot-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/rthomas24/grok-bot-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rthomas24/grok-bot-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Ryan Thomas (https://github.com/rthomas24)",
+  "mcpName": "io.github.rthomas24/grok-bot-mcp",
+  "type": "module",
+  "bin": {
+    "grok-bot-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "skills",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "doctor": "node src/index.js doctor",
+    "test": "node --test test/server.test.js",
+    "check:jxa": "osacompile -l JavaScript -o /tmp/grok-bot-mcp-check.scpt src/jxa/grok-bot.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin"
+  ]
+}

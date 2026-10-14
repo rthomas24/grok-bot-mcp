@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest a new tool, client or improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to do?
+      description: Describe what you're trying to get your agent to do with Grok Bot.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How could Grok Bot MCP help?
+      description: A new tool, a new parameter, support for another platform…
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?

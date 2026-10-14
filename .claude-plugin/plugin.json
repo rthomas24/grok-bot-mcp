@@ -1,0 +1,20 @@
+{
+  "name": "grok-bot",
+  "displayName": "Grok Bot",
+  "version": "1.0.0",
+  "description": "Drive the Grok Bot desktop app on your Mac from Claude Code: list your Bots, read their chats, send them messages and answer their questions while you watch.",
+  "author": {
+    "name": "Ryan Thomas",
+    "url": "https://github.com/rthomas24"
+  },
+  "homepage": "https://github.com/rthomas24/grok-bot-mcp",
+  "repository": "https://github.com/rthomas24/grok-bot-mcp",
+  "license": "MIT",
+  "keywords": ["grok", "grok-bot", "mcp", "agents", "macos", "automation"],
+  "mcpServers": {
+    "grok-bot": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/src/index.js"]
+    }
+  }
+}

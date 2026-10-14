@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Grok Bot MCP: let Claude Code, Codex and Cursor drive the Grok Bot app on your Mac">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0C16"/>
+      <stop offset="1" stop-color="#151A38"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="you" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D5BFF"/>
+      <stop offset="1" stop-color="#4F7DFF"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C9C2FF"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1010" cy="330" r="360" fill="url(#glow)"/>
+
+  <g class="sans">
+    <text x="80" y="200" font-size="84" font-weight="800" fill="url(#title)" letter-spacing="-1.5">Grok Bot MCP</text>
+    <text x="80" y="262" font-size="30" fill="#B7BAD6">Let Claude Code, Codex &amp; Cursor</text>
+    <text x="80" y="302" font-size="30" fill="#B7BAD6">drive the Grok Bot app on your Mac.</text>
+
+    <g font-size="19" font-weight="600">
+      <rect x="80" y="352" width="146" height="40" rx="20" fill="#1A1F3A" stroke="#7C5CFF"/>
+      <text x="153" y="378" text-anchor="middle" fill="#E3DEFF">MCP server</text>
+      <rect x="238" y="352" width="200" height="40" rx="20" fill="#1A1F3A" stroke="#2E3459"/>
+      <text x="338" y="378" text-anchor="middle" fill="#D3D5EA">Claude Code plugin</text>
+      <rect x="450" y="352" width="136" height="40" rx="20" fill="#1A1F3A" stroke="#2E3459"/>
+      <text x="518" y="378" text-anchor="middle" fill="#D3D5EA">Agent Skill</text>
+      <rect x="80" y="406" width="196" height="40" rx="20" fill="#1A1F3A" stroke="#2E3459"/>
+      <text x="178" y="432" text-anchor="middle" fill="#D3D5EA">Zero dependencies</text>
+      <rect x="288" y="406" width="200" height="40" rx="20" fill="#1A1F3A" stroke="#2E3459"/>
+      <text x="388" y="432" text-anchor="middle" fill="#D3D5EA">One-line install</text>
+    </g>
+
+    <text x="80" y="548" class="mono" font-size="22" fill="#8A8FB3"><tspan fill="#E8835E">$</tspan> claude mcp add grok-bot -- npx -y github:rthomas24/grok-bot-mcp</text>
+  </g>
+
+  <!-- Mini Grok Bot window -->
+  <g transform="translate(800 120)">
+    <rect width="400" height="300" rx="16" fill="#0D0F1C" stroke="#2B3050"/>
+    <path d="M16 0h368a16 16 0 0 1 16 16v20H0V16A16 16 0 0 1 16 0z" fill="#161A2E"/>
+    <circle cx="22" cy="18" r="6" fill="#FF5F57"/>
+    <circle cx="42" cy="18" r="6" fill="#FEBC2E"/>
+    <circle cx="62" cy="18" r="6" fill="#28C840"/>
+    <text x="200" y="23" text-anchor="middle" class="sans" font-size="13" font-weight="600" fill="#9DA2C6">Grok Bot</text>
+    <g class="sans" font-size="16">
+      <rect x="20" y="60" width="210" height="40" rx="12" fill="#1B1F38"/>
+      <text x="36" y="86" fill="#D6D8EA">Ready for the next task.</text>
+      <rect x="150" y="116" width="230" height="40" rx="12" fill="url(#you)"/>
+      <text x="166" y="142" fill="#FFFFFF">Find 3 sources on batteries</text>
+      <rect x="20" y="172" width="250" height="64" rx="12" fill="#1B1F38"/>
+      <text x="36" y="198" fill="#E4E5F2">Here are 3 sources,</text>
+      <text x="36" y="222" fill="#C2C5DD">newest first: …</text>
+      <rect x="20" y="250" width="360" height="34" rx="10" fill="#161A2E" stroke="#2B3050"/>
+      <text x="36" y="272" font-size="14" fill="#5F6488">Message Researcher…</text>
+    </g>
+  </g>
+  <g transform="translate(860 470)">
+    <rect width="290" height="56" rx="14" fill="#0E1120" stroke="#2B3050"/>
+    <text x="18" y="34" class="mono" font-size="16" fill="#ECECF5"><tspan fill="#4ADE80">●</tspan> grok-bot · send_message</text>
+  </g>
+  <line x1="1005" y1="420" x2="1005" y2="470" stroke="#7C5CFF" stroke-width="2" stroke-dasharray="6 6"/>
+</svg>

@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">Grok Bot MCP demo</title>
+  <desc id="desc">Illustration: in Claude Code, the user asks their Researcher bot for sources. Claude reads the Researcher chat, sends the message through the grok-bot MCP server, and the message and the bot's reply appear live in the Grok Bot desktop app.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0C16"/>
+      <stop offset="1" stop-color="#141833"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="you" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D5BFF"/>
+      <stop offset="1" stop-color="#4F7DFF"/>
+    </linearGradient>
+    <clipPath id="winL"><rect x="36" y="120" width="520" height="484" rx="14"/></clipPath>
+    <clipPath id="winR"><rect x="644" y="120" width="520" height="484" rx="14"/></clipPath>
+    <clipPath id="type1"><rect x="56" y="170" width="0" height="30">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite" keyTimes="0;0.02;0.11;0.97;1" values="0;0;480;480;0"/>
+    </rect></clipPath>
+    <clipPath id="type2"><rect x="56" y="198" width="0" height="30">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite" keyTimes="0;0.11;0.17;0.97;1" values="0;0;480;480;0"/>
+    </rect></clipPath>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="640" rx="24" fill="url(#bg)"/>
+  <circle cx="600" cy="360" r="330" fill="url(#glow)"/>
+
+  <!-- Header -->
+  <text x="40" y="66" class="sans" font-size="30" font-weight="700" fill="#F5F5FA">Grok Bot MCP</text>
+  <text x="40" y="96" class="sans" font-size="17" fill="#A3A6C4">Claude Code, Codex &amp; Cursor drive your Grok Bots, live on your Mac</text>
+  <g transform="translate(1012 58)">
+    <rect width="152" height="28" rx="14" fill="#1A1F3A" stroke="#2E3459"/>
+    <circle cx="18" cy="14" r="5" fill="#34D399">
+      <animate attributeName="opacity" dur="1.6s" repeatCount="indefinite" values="1;0.25;1"/>
+    </circle>
+    <text x="32" y="19" class="sans" font-size="13" font-weight="600" fill="#C9CBE0" letter-spacing="1">OPEN SOURCE</text>
+  </g>
+
+  <!-- Left: terminal running Claude Code -->
+  <g clip-path="url(#winL)">
+    <rect x="36" y="120" width="520" height="484" fill="#0E1120"/>
+    <rect x="36" y="120" width="520" height="36" fill="#161A2E"/>
+    <circle cx="58" cy="138" r="6" fill="#FF5F57"/>
+    <circle cx="78" cy="138" r="6" fill="#FEBC2E"/>
+    <circle cx="98" cy="138" r="6" fill="#28C840"/>
+    <text x="296" y="143" text-anchor="middle" class="mono" font-size="13" fill="#7F84A8">claude — ~/my-app</text>
+
+    <g class="mono" font-size="15">
+      <g clip-path="url(#type1)"><text x="56" y="192" fill="#ECECF5"><tspan fill="#E8835E">&gt;</tspan> Ask my Researcher bot for 3 recent sources</text></g>
+      <g clip-path="url(#type2)"><text x="74" y="216" fill="#ECECF5">on solid-state batteries, then summarize.</text></g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.19;0.2;0.97;1" values="0;0;1;1;0"/>
+        <text x="56" y="260" fill="#ECECF5"><tspan fill="#4ADE80">●</tspan> grok-bot · read_messages(Researcher)</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.24;0.25;0.97;1" values="0;0;1;1;0"/>
+        <text x="74" y="284" fill="#8A8FB3">└ caught up on 6 messages</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.29;0.3;0.97;1" values="0;0;1;1;0"/>
+        <text x="56" y="324" fill="#ECECF5"><tspan fill="#4ADE80">●</tspan> grok-bot · send_message(Researcher, …)</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.34;0.35;0.58;0.59;1" values="0;0;1;1;0;0"/>
+        <text x="74" y="348" fill="#8A8FB3">└ waiting for Researcher<tspan>…<animate attributeName="opacity" dur="0.9s" repeatCount="indefinite" values="1;0.2;1"/></tspan></text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.59;0.6;0.97;1" values="0;0;1;1;0"/>
+        <text x="74" y="348" fill="#8A8FB3">└ Researcher replied in 14s</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.65;0.66;0.97;1" values="0;0;1;1;0"/>
+        <text x="56" y="392" fill="#ECECF5"><tspan fill="#ECECF5">●</tspan> Your Researcher bot found 3 sources:</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.69;0.7;0.97;1" values="0;0;1;1;0"/>
+        <text x="74" y="418" fill="#C9CBE0">1. A 2026 review of sulfide electrolytes</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.72;0.73;0.97;1" values="0;0;1;1;0"/>
+        <text x="74" y="442" fill="#C9CBE0">2. A study on stopping lithium dendrites</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.75;0.76;0.97;1" values="0;0;1;1;0"/>
+        <text x="74" y="466" fill="#C9CBE0">3. A cost analysis of pilot production</text>
+      </g>
+
+      <line x1="56" y1="540" x2="536" y2="540" stroke="#232845"/>
+      <text x="56" y="574" fill="#ECECF5"><tspan fill="#E8835E">&gt;</tspan></text>
+      <rect x="74" y="561" width="9" height="17" fill="#ECECF5">
+        <animate attributeName="opacity" dur="1s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.5;0.5;1"/>
+      </rect>
+    </g>
+  </g>
+  <rect x="36" y="120" width="520" height="484" rx="14" fill="none" stroke="#2B3050"/>
+
+  <!-- Middle: the MCP connection -->
+  <g>
+    <line x1="560" y1="362" x2="640" y2="362" stroke="#7C5CFF" stroke-width="2" stroke-dasharray="6 6">
+      <animate attributeName="stroke-dashoffset" dur="0.8s" repeatCount="indefinite" values="12;0"/>
+    </line>
+    <rect x="570" y="347" width="60" height="30" rx="15" fill="#1A1F3A" stroke="#7C5CFF"/>
+    <text x="600" y="367" text-anchor="middle" class="sans" font-size="13" font-weight="700" fill="#D9D2FF" letter-spacing="0.5">MCP</text>
+  </g>
+
+  <!-- Right: the Grok Bot desktop app -->
+  <g clip-path="url(#winR)">
+    <rect x="644" y="120" width="520" height="484" fill="#0D0F1C"/>
+    <rect x="644" y="120" width="520" height="36" fill="#161A2E"/>
+    <circle cx="666" cy="138" r="6" fill="#FF5F57"/>
+    <circle cx="686" cy="138" r="6" fill="#FEBC2E"/>
+    <circle cx="706" cy="138" r="6" fill="#28C840"/>
+    <text x="904" y="143" text-anchor="middle" class="sans" font-size="13" font-weight="600" fill="#9DA2C6">Grok Bot</text>
+
+    <!-- Sidebar -->
+    <rect x="644" y="156" width="150" height="448" fill="#12152A"/>
+    <g class="sans">
+      <text x="662" y="186" font-size="11" font-weight="700" fill="#6B7096" letter-spacing="1.5">BOTS</text>
+      <circle cx="668" cy="210" r="5" fill="#F59E0B"/><text x="680" y="215" font-size="14" fill="#B9BCD6">Grok Bot</text>
+      <rect x="654" y="228" width="130" height="28" rx="7" fill="#262B52"/>
+      <circle cx="668" cy="242" r="5" fill="#34D399"/><text x="680" y="247" font-size="14" font-weight="600" fill="#F2F2FA">Researcher</text>
+      <circle cx="668" cy="274" r="5" fill="#60A5FA"/><text x="680" y="279" font-size="14" fill="#B9BCD6">Coder</text>
+      <circle cx="668" cy="306" r="5" fill="#F472B6"/><text x="680" y="311" font-size="14" fill="#B9BCD6">Marketer</text>
+    </g>
+
+    <!-- Chat -->
+    <g class="sans">
+      <text x="814" y="188" font-size="16" font-weight="700" fill="#F2F2FA">Researcher</text>
+      <text x="814" y="207" font-size="12" fill="#6B7096">Works on its own cloud computer</text>
+      <line x1="794" y1="220" x2="1164" y2="220" stroke="#1F2440"/>
+
+      <rect x="814" y="236" width="196" height="36" rx="11" fill="#1B1F38"/>
+      <text x="829" y="259" font-size="14" fill="#D6D8EA">Ready for the next task.</text>
+
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.31;0.32;0.97;1" values="0;0;1;1;0"/>
+        <rect x="948" y="288" width="200" height="56" rx="11" fill="url(#you)"/>
+        <text x="963" y="311" font-size="14" fill="#FFFFFF">Find 3 recent sources on</text>
+        <text x="963" y="331" font-size="14" fill="#FFFFFF">solid-state batteries</text>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.36;0.37;0.57;0.58;1" values="0;0;1;1;0;0"/>
+        <rect x="814" y="360" width="70" height="34" rx="11" fill="#1B1F38"/>
+        <circle cx="834" cy="377" r="4" fill="#9DA2C6"><animate attributeName="opacity" dur="1.2s" repeatCount="indefinite" values="1;0.25;1"/></circle>
+        <circle cx="849" cy="377" r="4" fill="#9DA2C6"><animate attributeName="opacity" dur="1.2s" begin="0.2s" repeatCount="indefinite" values="1;0.25;1"/></circle>
+        <circle cx="864" cy="377" r="4" fill="#9DA2C6"><animate attributeName="opacity" dur="1.2s" begin="0.4s" repeatCount="indefinite" values="1;0.25;1"/></circle>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.57;0.58;0.97;1" values="0;0;1;1;0"/>
+        <rect x="814" y="360" width="268" height="104" rx="11" fill="#1B1F38"/>
+        <text x="829" y="383" font-size="14" fill="#E4E5F2">Here are 3 sources, newest first:</text>
+        <text x="829" y="405" font-size="14" fill="#C2C5DD">1. Sulfide electrolyte review</text>
+        <text x="829" y="425" font-size="14" fill="#C2C5DD">2. Dendrite suppression study</text>
+        <text x="829" y="445" font-size="14" fill="#C2C5DD">3. Pilot-line cost analysis</text>
+      </g>
+
+      <rect x="814" y="548" width="334" height="38" rx="11" fill="#161A2E" stroke="#2B3050"/>
+      <text x="830" y="572" font-size="13" fill="#5F6488">
+        Message Researcher…
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.29;0.295;0.315;0.32;1" values="1;1;0;0;1;1"/>
+      </text>
+      <text x="830" y="572" font-size="13" fill="#ECECF5" opacity="0">
+        Find 3 recent sources on solid-st…
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.29;0.295;0.315;0.32;1" values="0;0;1;1;0;0"/>
+      </text>
+    </g>
+  </g>
+  <rect x="644" y="120" width="520" height="484" rx="14" fill="none" stroke="#2B3050"/>
+</svg>

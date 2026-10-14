@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grok Bot"
+  short_description: "Drive the Grok Bot desktop app on your Mac"
+  default_prompt: "List my Grok Bot agents and summarize what each one is working on."

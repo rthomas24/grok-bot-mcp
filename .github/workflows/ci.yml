@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }} on macOS
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22, 24]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Test
+        run: npm test
+      - name: Syntax-check the JXA script
+        run: osacompile -l JavaScript -o "$RUNNER_TEMP/grok-bot.scpt" src/jxa/grok-bot.js
+      - name: Check the JSON manifests
+        run: |
+          for f in package.json server.json .claude-plugin/plugin.json .claude-plugin/marketplace.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f', 'utf8'))" && echo "ok $f"
+          done
+      - name: Check versions match
+        run: |
+          node -e "
+            const read = f => JSON.parse(require('fs').readFileSync(f, 'utf8'));
+            const v = read('package.json').version;
+            const s = read('server.json');
+            const p = read('.claude-plugin/plugin.json');
+            const all = { 'server.json': s.version, 'server.json packages': s.packages[0].version, 'plugin.json': p.version };
+            const bad = Object.entries(all).filter(([, x]) => x !== v);
+            if (bad.length) { console.error('Version mismatch with package.json ' + v + ':', bad); process.exit(1); }
+            console.log('All versions are', v);
+          "

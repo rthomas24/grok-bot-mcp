@@ -1,0 +1,15 @@
+{
+  "name": "grok-bot-mcp",
+  "description": "Grok Bot MCP: let Claude Code drive the Grok Bot desktop app on macOS.",
+  "owner": {
+    "name": "Ryan Thomas",
+    "url": "https://github.com/rthomas24"
+  },
+  "plugins": [
+    {
+      "name": "grok-bot",
+      "source": "./",
+      "description": "Drive the Grok Bot desktop app on your Mac: list your Bots, read their chats, send them messages and answer their questions."
+    }
+  ]
+}

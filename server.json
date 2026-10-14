@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.rthomas24/grok-bot-mcp",
+  "description": "Let Claude Code, Codex & Cursor drive the Grok Bot desktop app on macOS: read chats, send messages.",
+  "repository": {
+    "url": "https://github.com/rthomas24/grok-bot-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "grok-bot-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
